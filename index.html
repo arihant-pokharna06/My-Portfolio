@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arihant Pokharna | Computer Engineering Student</title>
+  <meta name="description" content="Portfolio of Arihant Pokharna — 2nd Year Computer Engineering student at Zeal Education Society. Skills: C, C++, Java, Python, DSA, HTML, CSS, JavaScript."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" id="cursor-trail" aria-hidden="true"></div>
+
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__logo"><span class="nav__logo-bracket">&lt;</span>Portfolio<span class="nav__logo-bracket">/&gt;</span></div>
+    <ul class="nav__links" role="list">
+      <li><a href="#home" id="nav-home" class="nav__link">Home</a></li>
+      <li><a href="#about" id="nav-about" class="nav__link">About</a></li>
+      <li><a href="#skills" id="nav-skills" class="nav__link">Skills</a></li>
+      <li><a href="#projects" id="nav-projects" class="nav__link">Projects</a></li>
+      <li><a href="#contact" id="nav-contact" class="nav__link">Contact</a></li>
+    </ul>
+    <button class="nav__menu-btn" id="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero__particles" id="particles" aria-hidden="true"></div>
+    <div class="hero__shapes" aria-hidden="true">
+      <div class="shape shape--cube" id="shape1"></div>
+      <div class="shape shape--octahedron" id="shape2"></div>
+      <div class="shape shape--ring" id="shape3"></div>
+      <div class="shape shape--tetra" id="shape4"></div>
+      <div class="shape shape--sphere" id="shape5"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow" id="hero-eyebrow">
+        <span class="eyebrow__dot"></span>Available for Internships &amp; Collaborations
+      </p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="hero__title-line">Hi, I am</span>
+        <span class="hero__name" id="typed-name">Arihant<br/>Pokharna</span>
+      </h1>
+      <p class="hero__subtitle">
+        <span class="typewriter" id="typewriter"></span>
+        <span class="typewriter-cursor" aria-hidden="true">|</span>
+      </p>
+      <p class="hero__desc">2nd Year Computer Engineering student at <strong>Zeal Education Society</strong>, crafting elegant solutions with code and a passion for problem-solving.</p>
+      <div class="hero__cta" id="hero-cta">
+        <a href="#projects" id="cta-projects" class="btn btn--primary">
+          <span>View My Work</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://github.com/arihant-pokharna06" target="_blank" rel="noopener noreferrer" id="cta-github" class="btn btn--outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <div class="scroll-hint__mouse"><div class="scroll-hint__wheel"></div></div>
+        <span>Scroll to explore</span>
+      </div>
+    </div>
+    <div class="hero__code-card" id="code-card" aria-hidden="true">
+      <div class="code-card__header">
+        <span class="code-card__dot" style="background:#ff5f57"></span>
+        <span class="code-card__dot" style="background:#febc2e"></span>
+        <span class="code-card__dot" style="background:#28c840"></span>
+        <span class="code-card__title">arihant.cpp</span>
+      </div>
+      <pre class="code-card__body"><code><span class="kw">class</span> <span class="cls">Arihant</span> {
+  <span class="kw">public</span>:
+    string college = <span class="str">"Zeal Edu"</span>;
+    string year    = <span class="str">"2nd Year"</span>;
+    vector&lt;string&gt; skills = {
+      <span class="str">"C++"</span>, <span class="str">"Java"</span>,
+      <span class="str">"Python"</span>, <span class="str">"DSA"</span>
+    };
+    <span class="kw">bool</span> passionate = <span class="kw">true</span>;
+};</code></pre>
+    </div>
+  </section>
+
+  <!-- ABOUT — with real photo -->
+  <section class="section about" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__tag">01. About</span>
+        <h2 class="section__title" id="about-heading">Who Am I?</h2>
+      </div>
+      <div class="about__grid">
+        <!-- PHOTO COLUMN -->
+        <div class="about__visual" data-animate data-delay="100">
+          <div class="about__photo-wrap">
+            <div class="about__photo-ring about__photo-ring--1" aria-hidden="true"></div>
+            <div class="about__photo-ring about__photo-ring--2" aria-hidden="true"></div>
+            <div class="about__photo-ring about__photo-ring--3" aria-hidden="true"></div>
+            <div class="about__photo-frame">
+              <img
+                src="photo.jpg"
+                alt="Arihant Pokharna — Computer Engineering student"
+                class="about__photo"
+                loading="eager"
+                width="320"
+                height="380"
+              />
+              <div class="about__photo-overlay" aria-hidden="true"></div>
+            </div>
+            <!-- Floating badge -->
+            <div class="about__badge" id="about-badge">
+              <span class="about__badge-icon">&#127891;</span>
+              <div>
+                <p class="about__badge-title">2nd Year CE</p>
+                <p class="about__badge-sub">Zeal Education Society</p>
+              </div>
+            </div>
+            <!-- Floating stats pill -->
+            <div class="about__pill" aria-hidden="true">
+              <span class="about__pill-dot"></span>
+              <span>Open to Opportunities</span>
+            </div>
+          </div>
+        </div>
+        <!-- TEXT COLUMN -->
+        <div class="about__text" data-animate data-delay="200">
+          <h3 class="about__greeting">Hello, World! <span class="wave">&#128075;</span></h3>
+          <p class="about__para">I am <strong>Arihant Pokharna</strong>, a passionate Computer Engineering student in my 2nd year at <strong>Zeal Education Society</strong>. I love turning complex problems into elegant, efficient code.</p>
+          <p class="about__para">My journey began with C and C++, sharpening my understanding of memory management and algorithms. Today, I work across multiple domains from Data Structures and Algorithms to full-stack web development, always with a hunger to learn more.</p>
+          <p class="about__para">When I am not coding, you will find me exploring open-source projects, tackling competitive programming challenges, or building cool side projects.</p>
+          <div class="about__stats">
+            <div class="about__stat" id="stat-1"><span class="about__stat-num" data-target="7">0</span><span class="about__stat-label">Languages</span></div>
+            <div class="about__stat" id="stat-2"><span class="about__stat-num" data-target="2">0</span><span class="about__stat-label">Years Learning</span></div>
+            <div class="about__stat" id="stat-3"><span class="about__stat-num" data-target="5">0</span><span class="about__stat-label">GitHub Projects</span></div>
+          </div>
+          <a href="https://github.com/arihant-pokharna06" target="_blank" rel="noopener noreferrer" id="about-github-link" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View GitHub Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__tag">02. Skills</span>
+        <h2 class="section__title" id="skills-heading">Tech Arsenal</h2>
+        <p class="section__desc">Technologies I wield to build the future</p>
+      </div>
+      <div class="skills__grid" data-animate data-delay="100">
+        <article class="skill-card" id="skill-c" tabindex="0">
+          <div class="skill-card__glow"></div>
+          <div class="skill-card__icon-wrap"><div class="skill-card__icon skill-card__icon--c">C</div></div>
+          <h3 class="skill-card__name">C</h3>
+          <p class="skill-card__desc">Systems programming, memory management, and performance-critical code.</p>
+          <div class="skill-card__bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="C proficiency 80%"><div class="skill-card__fill" style="--progress:80%"></div></div>
+          <span class="skill-card__level">Advanced</span>
+        </article>
+        <article class="skill-card" id="skill-cpp" tabindex="0">
+          <div class="skill-card__glow"></div>
+          <div class="skill-card__icon-wrap"><div class="skill-card__icon skill-card__icon--cpp">C++</div></div>
+          <h3 class="skill-card__name">C++</h3>
+          <p class="skill-card__desc">OOP, STL, competitive programming, and complex algorithm design.</p>
+          <div class="skill-card__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="C++ proficiency 85%"><div class="skill-card__fill" style="--progress:85%"></div></div>
+          <span class="skill-card__level">Advanced</span>
+        </article>
+        <article class="skill-card" id="skill-java" tabindex="0">
+          <div class="skill-card__glow"></div>
+          <div class="skill-card__icon-wrap"><div class="skill-card__icon skill-card__icon--java">&#9749;</div></div>
+          <h3 class="skill-card__name">Java</h3>
+          <p class="skill-card__desc">Object-oriented programming, data structures, and enterprise applications.</p>
+          <div class="skill-card__bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Java proficiency 75%"><div class="skill-card__fill" style="--progress:75%"></div></div>
+          <span class="skill-card__level">Intermediate</span>
+        </article>
+        <article class="skill-card" id="skill-python" tabindex="0">
+          <div class="skill-card__glow"></div>
+          <div class="skill-card__icon-wrap"><div class="skill-card__icon skill-card__icon--py">&#128013;</div></div>
+          <h3 class="skill-card__name">Python</h3>
+          <p class="skill-card__desc">Scripting, automation, data processing, and rapid prototyping.</p>
+          <div class="skill-card__bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 78%"><div class="skill-card__fill" style="--progress:78%"></div></div>
+          <span class="skill-card__level">Intermediate</span>
+        </article>
+        <article class="skill-card" id="skill-dsa" tabindex="0">
+          <div class="skill-card__glow"></div>
+          <div class="skill-card__icon-wrap"><div class="skill-card__icon skill-card__icon--dsa">&#128202;</div></div>
+          <h3 class="skill-card__name">DSA</h3>
+          <p class="skill-card__desc">Data Structures and Algorithms: arrays, trees, graphs, dynamic programming.</p>
+          <div class="skill-card__bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="DSA proficiency 82%"><div class="skill-card__fill" style="--progress:82%"></div></div>
+          <span class="skill-card__level">Advanced</span>
+        </article>
+        <article class="skill-card" id="skill-web" tabindex="0">
+          <div class="skill-card__glow"></div>
+          <div class="skill-card__icon-wrap"><div class="skill-card__icon skill-card__icon--web">&#127760;</div></div>
+          <h3 class="skill-card__name">Web Dev</h3>
+          <p class="skill-card__desc">HTML5, CSS3, and JavaScript for building responsive, interactive interfaces.</p>
+          <div class="skill-card__bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Web Development proficiency 80%"><div class="skill-card__fill" style="--progress:80%"></div></div>
+          <span class="skill-card__level">Advanced</span>
+        </article>
+      </div>
+      <div class="skills__tags" data-animate data-delay="300" aria-label="Technology tags">
+        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+        <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Algorithms</span>
+        <span class="tag">OOP</span><span class="tag">STL</span><span class="tag">Data Structures</span>
+        <span class="tag">Recursion</span><span class="tag">Sorting</span><span class="tag">Graphs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS — real GitHub repos -->
+  <section class="section projects" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <!-- Projects Header -->
+      <div class="section__header proj-header" data-animate>
+        <span class="section__tag">03. Projects</span>
+        <h2 class="section__title proj-title" id="projects-heading">
+          <span class="proj-title__word">GitHub</span>
+          <span class="proj-title__word proj-title__word--accent">Projects</span>
+        </h2>
+      </div>
+
+      <!-- Terminal window -->
+      <div class="proj-terminal" data-animate data-delay="100" aria-label="Terminal showing git log">
+        <div class="proj-terminal__bar">
+          <span class="proj-terminal__dot" style="background:#ff5f57"></span>
+          <span class="proj-terminal__dot" style="background:#febc2e"></span>
+          <span class="proj-terminal__dot" style="background:#28c840"></span>
+          <span class="proj-terminal__title">arihant@portfolio:~/projects</span>
+        </div>
+        <div class="proj-terminal__body">
+          <p class="proj-terminal__line">
+            <span class="proj-terminal__prompt">arihant@portfolio</span><span class="proj-terminal__sep">:</span><span class="proj-terminal__path">~/projects</span><span class="proj-terminal__sep">$</span>&nbsp;<span class="proj-terminal__cmd" id="term-cmd"></span><span class="proj-terminal__blink">&#9611;</span>
+          </p>
+          <div class="proj-terminal__log" id="term-log" aria-live="polite"></div>
+        </div>
+        <div class="proj-terminal__stats">
+          <span class="proj-stat"><span class="proj-stat__dot proj-stat__dot--green"></span>5 Repositories</span>
+          <span class="proj-stat"><span class="proj-stat__dot proj-stat__dot--blue"></span>HTML / JS</span>
+          <span class="proj-stat"><span class="proj-stat__dot proj-stat__dot--purple"></span>C++</span>
+          <span class="proj-stat"><span class="proj-stat__dot proj-stat__dot--orange"></span>PHP</span>
+          <a href="https://github.com/arihant-pokharna06" target="_blank" rel="noopener noreferrer" class="proj-stat proj-stat--link">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            @arihant-pokharna06
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="proj-filters" data-animate data-delay="150" role="group" aria-label="Filter projects by language">
+        <button class="proj-filter proj-filter--active" data-filter="all" id="filter-all">All <span class="proj-filter__count">5</span></button>
+        <button class="proj-filter" data-filter="html" id="filter-html"><span class="proj-filter__dot" style="background:#f56527"></span>HTML / JS <span class="proj-filter__count">3</span></button>
+        <button class="proj-filter" data-filter="cpp"  id="filter-cpp"><span class="proj-filter__dot" style="background:#6c63ff"></span>C++ <span class="proj-filter__count">1</span></button>
+        <button class="proj-filter" data-filter="php"  id="filter-php"><span class="proj-filter__dot" style="background:#777bb3"></span>PHP <span class="proj-filter__count">1</span></button>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- Project 1: LOCKRANK (Featured) -->
+        <article class="project-card project-card--featured" id="project-lockrank" data-animate data-lang="html" tabindex="0">
+          <div class="project-card__bg" style="--hue:220"></div>
+          <div class="project-card__content">
+            <div class="project-card__top">
+              <div class="project-card__meta">
+                <span class="project-card__number">01</span>
+                <span class="project-card__lang project-card__lang--html">HTML</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://arihant-pokharna06.github.io/LOCKRANK/" target="_blank" rel="noopener noreferrer" id="proj1-live" class="project-card__link project-card__link--live" aria-label="View LOCKRANK live demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+                <a href="https://github.com/arihant-pokharna06/LOCKRANK" target="_blank" rel="noopener noreferrer" id="proj1-github" class="project-card__link" aria-label="View LOCKRANK on GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">&#128274; LOCKRANK</h3>
+            <p class="project-card__desc">Password strength checker &amp; generator. Generates strong passwords and evaluates whether your password meets security standards. Built in 30 minutes with AI assistance!</p>
+            <div class="project-card__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Security</span></div>
+          </div>
+          <div class="project-card__3d-accent" aria-hidden="true"><div class="accent-cube"></div></div>
+        </article>
+
+        <!-- Project 2: Motor-Hub -->
+        <article class="project-card" id="project-motorhub" data-animate data-lang="html" data-delay="100" tabindex="0">
+          <div class="project-card__bg" style="--hue:160"></div>
+          <div class="project-card__content">
+            <div class="project-card__top">
+              <div class="project-card__meta">
+                <span class="project-card__number">02</span>
+                <span class="project-card__lang project-card__lang--html">HTML</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://arihant-pokharna06.github.io/Motor-Hub/" target="_blank" rel="noopener noreferrer" id="proj2-live" class="project-card__link project-card__link--live" aria-label="View Motor-Hub live">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+                <a href="https://github.com/arihant-pokharna06/Motor-Hub" target="_blank" rel="noopener noreferrer" id="proj2-github" class="project-card__link" aria-label="View Motor-Hub on GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">&#128663; Motor-Hub</h3>
+            <p class="project-card__desc">My first web project — a car and bikes deals website built with HTML and CSS. Showcasing my early web development journey with a clean, structured layout.</p>
+            <div class="project-card__tags"><span>HTML</span><span>CSS</span><span>First Project</span></div>
+          </div>
+        </article>
+
+        <!-- Project 3: ATM -->
+        <article class="project-card" id="project-atm" data-animate data-lang="cpp" data-delay="200" tabindex="0">
+          <div class="project-card__bg" style="--hue:280"></div>
+          <div class="project-card__content">
+            <div class="project-card__top">
+              <div class="project-card__meta">
+                <span class="project-card__number">03</span>
+                <span class="project-card__lang project-card__lang--cpp">C++</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/arihant-pokharna06/ATM" target="_blank" rel="noopener noreferrer" id="proj3-github" class="project-card__link" aria-label="View ATM on GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">&#129975; ATM System</h3>
+            <p class="project-card__desc">Console-based ATM simulation in C++ using object-oriented programming — classes, objects, and encapsulation. Implements deposit, withdrawal, and balance inquiry.</p>
+            <div class="project-card__tags"><span>C++</span><span>OOP</span><span>Classes</span></div>
+          </div>
+        </article>
+
+        <!-- Project 4: Fintrack -->
+        <article class="project-card" id="project-fintrack" data-animate data-lang="php" data-delay="300" tabindex="0">
+          <div class="project-card__bg" style="--hue:30"></div>
+          <div class="project-card__content">
+            <div class="project-card__top">
+              <div class="project-card__meta">
+                <span class="project-card__number">04</span>
+                <span class="project-card__lang project-card__lang--php">PHP</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/arihant-pokharna06/Fintrack" target="_blank" rel="noopener noreferrer" id="proj4-github" class="project-card__link" aria-label="View Fintrack on GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">&#128200; Fintrack</h3>
+            <p class="project-card__desc">Finance tracker application — a collaborative project built with PHP. Helps users manage and track personal finances, expenses, and budgets efficiently.</p>
+            <div class="project-card__tags"><span>PHP</span><span>Finance</span><span>Web App</span></div>
+          </div>
+        </article>
+
+        <!-- Project 5: Cartify -->
+        <article class="project-card" id="project-cartify" data-animate data-lang="html" data-delay="400" tabindex="0">
+          <div class="project-card__bg" style="--hue:340"></div>
+          <div class="project-card__content">
+            <div class="project-card__top">
+              <div class="project-card__meta">
+                <span class="project-card__number">05</span>
+                <span class="project-card__lang project-card__lang--html">HTML/JS</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/arihant-pokharna06/Cartify" target="_blank" rel="noopener noreferrer" id="proj5-github" class="project-card__link" aria-label="View Cartify on GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">&#128722; Cartify</h3>
+            <p class="project-card__desc">A fully responsive e-commerce shopping cart web app. Features product listings, add-to-cart functionality, real-time cart updates, and a clean checkout UI — built with HTML, CSS, and JavaScript.</p>
+            <div class="project-card__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>E-Commerce</span></div>
+          </div>
+        </article>
+
+      </div>
+      <div class="projects__cta" data-animate>
+        <a href="https://github.com/arihant-pokharna06" target="_blank" rel="noopener noreferrer" id="all-projects-link" class="btn btn--outline btn--large">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__tag">04. Contact</span>
+        <h2 class="section__title" id="contact-heading">Let us Connect</h2>
+        <p class="section__desc">Have a project idea or just want to say hi? I would love to hear from you.</p>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info" data-animate data-delay="100">
+          <div class="contact__card" id="contact-github">
+            <div class="contact__card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></div>
+            <div><p class="contact__card-label">GitHub</p><a href="https://github.com/arihant-pokharna06" target="_blank" rel="noopener noreferrer" class="contact__card-value">arihant-pokharna06</a></div>
+          </div>
+          <div class="contact__card" id="contact-college">
+            <div class="contact__card-icon" aria-hidden="true">&#127891;</div>
+            <div><p class="contact__card-label">College</p><p class="contact__card-value">Zeal Education Society</p></div>
+          </div>
+          <div class="contact__card" id="contact-year">
+            <div class="contact__card-icon" aria-hidden="true">&#128218;</div>
+            <div><p class="contact__card-label">Year</p><p class="contact__card-value">2nd Year, Computer Engineering</p></div>
+          </div>
+          <div class="contact__card" id="contact-open">
+            <div class="contact__card-icon" aria-hidden="true">&#10024;</div>
+            <div><p class="contact__card-label">Open To</p><p class="contact__card-value">Internships, Projects and Collaborations</p></div>
+          </div>
+        </div>
+        <div class="contact__form-wrap" data-animate data-delay="200">
+          <form class="contact__form" id="contact-form" novalidate aria-label="Contact form">
+            <div class="form__group"><label class="form__label" for="form-name">Your Name</label><input class="form__input" type="text" id="form-name" name="name" placeholder="John Doe" autocomplete="name" required/></div>
+            <div class="form__group"><label class="form__label" for="form-email">Email Address</label><input class="form__input" type="email" id="form-email" name="email" placeholder="john@example.com" autocomplete="email" required/></div>
+            <div class="form__group"><label class="form__label" for="form-message">Message</label><textarea class="form__input form__textarea" id="form-message" name="message" placeholder="Tell me about your project or idea..." rows="5" required></textarea></div>
+            <button type="submit" id="form-submit" class="btn btn--primary btn--full">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 19-7z"/></svg>
+            </button>
+            <p class="form__success" id="form-success" aria-live="polite" hidden>Message sent! I will get back to you soon.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__copy">Crafted with &#10084;&#65039; by <strong>Arihant Pokharna</strong> &copy; 2026</p>
+      <p class="footer__sub">Computer Engineering Student &middot; Zeal Education Society</p>
+      <a href="https://github.com/arihant-pokharna06" target="_blank" rel="noopener noreferrer" id="footer-github" class="footer__github" aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        @arihant-pokharna06
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
